@@ -1,12 +1,17 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 function Header() {
+
+  // bg-base-100 
   return (
-    <div className="navbar bg-base-100 shadow-sm lg:px-80 h-[10vh] w-full">
-        <div className="flex-1">
-           <Image className= "btn btn-ghost" src="/images/logo.png" alt="Logo" width={1000} height="1000"/>
-          <a className="btn btn-ghost text-xl">The Big Bank Theory</a>
+    <div className="navbar  lg:px-80 h-[10vh] w-full justify-between">
+        <div className="flex">
+          <Link className='flex items-center gap-2' href="/">
+            <Image className="max-w-10 h-full" src="/images/logo.png" alt="Logo" width={1000} height="1000"/>
+            <p className=" text-xl font-bold">The Big Bank Theory </p>
+          </Link>
         </div>
         <div className="flex-none">
           <button className="btn btn-square btn-ghost">

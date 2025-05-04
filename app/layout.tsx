@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import  {Montserrat, Merriweather}  from "next/font/google"
 // import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -25,10 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="coffee">
-      <body
-        className="w-screen"
-      >
+    <html lang="en" >
+      <body data-theme="cyberpunk" >
         {children}
       </body>
     </html>
