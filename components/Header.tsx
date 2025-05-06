@@ -74,13 +74,13 @@ const Header = () => {
           
           <div className="drawer-content lg:hidden">
             <label htmlFor='my-drawer'
-              className="btn btn-ghost btn-xl btn-circle hover:bg-base-200 swap swap-rotate z-55"
+              className=" btn-ghost btn-xl btn-circle swap swap-rotate z-55"
               onClick={toggleDrawer}
               aria-label={isOpen ? "Close menu" : "Open menu"}
             >
               {isOpen ? (
                 <svg
-                  className="fill-current "
+                  className="fill-base-100 "
                   xmlns="http://www.w3.org/2000/svg"
                   width="30"
                   height="30"
@@ -102,13 +102,13 @@ const Header = () => {
             </label>
           </div>
           
-          <div className="drawer-side  z-50">
+          <div className="drawer-side z-50">
             <label
               htmlFor="my-drawer"
               className="drawer-overlay"
               onClick={closeDrawer}
             />
-            <ul className="menu p-4 pl-10 w-screen min-h-full bg-base-100 text-base-content justify-center">
+            <ul className="menu bg-gray-950 p-4 pl-10 w-screen min-h-full  text-base-100 justify-center">
               <li>
                 <Link href="#home" onClick={handleLinkClick} className='text-6xl font-semibold transition-all'>
                   Home

@@ -8,7 +8,7 @@ function Footer() {
 
     return (
 
-        <footer className="footer sm:footer-horizontal sm:footer-center  bg-neutral text-neutral-content p-10 py-20 place-items-center">
+        <footer className="footer lg:footer-horizontal lg:footer-center  bg-neutral text-neutral-content p-10 py-20 place-items-center">
 
             
             <aside>
@@ -29,11 +29,11 @@ function Footer() {
                 <h6 className="footer-title w-full text-center">Social</h6>
 
                 <div className="grid grid-flow-col gap-4">
-                    <a className='link link-hover hover:scale-110 transition-transform duration-200'>
+                    <a className=' link link-hover hover:scale-110 transition-transform duration-200'>
                         <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
+                        width="40"
+                        height="40"
                         viewBox="0 0 24 24"
                         className="fill-current hover:fill-[#1DA1F2]">
                         <path
@@ -43,8 +43,8 @@ function Footer() {
                     <a>
                         <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
+                        width="40"
+                        height="40"
                         viewBox="0 0 24 24"
                         className="fill-current">
                         <path
@@ -54,8 +54,8 @@ function Footer() {
                     <a>
                         <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
+                        width="40"
+                        height="40"
                         viewBox="0 0 24 24"
                         className="fill-current">
                         <path
@@ -66,8 +66,8 @@ function Footer() {
                     <a href="https://www.linkedin.com/in/awitiawuor/">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
+                            width="40"
+                            height="40"
                             viewBox="0 0 24 24"
                             className="fill-current hover:fill-[#0A66C2]"> 
                             <path
@@ -81,15 +81,15 @@ function Footer() {
 
             <form className='flex flex-col items-center justify-center'>
                 <h6 className="footer-title w-full text-center">Newsletter</h6>
-                <fieldset className="w-80">
-                <label className='text-neutral-content'>Enter your email address</label>
-                <div className="join">
-                    <input 
-                    type="text"
-                    placeholder="username@site.com"
-                    className="input input-bordered join-item text-base-content bg-white" />
-                    <button className="btn btn-primary join-item">Subscribe</button>
-                </div>
+                <fieldset className="w-80 mx-auto">
+                    <label className='text-neutral-content'>Enter your email address</label>
+                    <div className="join">
+                        <input 
+                        type="text"
+                        placeholder="username@site.com"
+                        className="input input-bordered join-item text-base-content bg-white" />
+                        <button className="btn btn-primary join-item">Subscribe</button>
+                    </div>
                 </fieldset>
             </form>
             
