@@ -21,7 +21,7 @@ function Services() {
 
 
     return (
-        <section id="services" className=" pt-40 shadow-sm bg-white">
+        <section id="services" className=" pt-20 shadow-sm bg-white">
             <h1 className="text-5xl font-bold text-center">What We Do</h1>
 
             <div  className="card-container w-full flex flex-wrap py-20 justify-center gap-8">
@@ -40,9 +40,7 @@ function Services() {
                         <h2 className="card-title border-b">{service.title}</h2>
                         <p>{service.description}</p>
 
-                        <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Buy Now</button>
-                        </div>
+                      
 
                     </div>
                 </div>

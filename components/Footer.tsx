@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 function Footer() {
 
@@ -12,10 +13,10 @@ function Footer() {
             
             <aside>
 
-                <div className='flex items-center gap-4'>
+                <Link href="#home" className='flex items-center gap-4'>
                     <Image width="50" height="50" src="/images/logo_yellow.png" alt="Logo" />
                     <p>The Big Bank Theory</p>
-                </div>
+                </Link>
                 
                 <p>
                     What Matters In African Banking
@@ -86,7 +87,7 @@ function Footer() {
                     <input 
                     type="text"
                     placeholder="username@site.com"
-                    className="input input-bordered join-item text-base-content" />
+                    className="input input-bordered join-item text-base-content bg-white" />
                     <button className="btn btn-primary join-item">Subscribe</button>
                 </div>
                 </fieldset>

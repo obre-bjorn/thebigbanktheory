@@ -22,7 +22,7 @@ function Hero() {
         {/* Content Container */}
         <div className="w-full lg:w-1/2 ">
           <h1 className="text-3xl md:text-4xl lg:text-8xl font-semibold leading-tight">
-            What matters in African Banking
+            What matters in African Banking.
           </h1>
           <p className="py-6 text-lg md:text-2xl lg:text-2xl font-semibold">
             Get expert insights, trends, and strategies to grow your business.
@@ -41,8 +41,8 @@ function Hero() {
                     <input
                     type="text"
                     placeholder="username@site.com"
-                    className="input input-bordered join-item" />
-                    <button className="btn btn-primary join-item">Subscribe</button>
+                    className="input input-bordered input-lg join-item bg-white" />
+                    <button className="btn btn-primary btn-lg join-item">Subscribe</button>
                 </div>
                 </fieldset>
             </form>

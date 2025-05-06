@@ -1,9 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 function Blog() {
   return (
-    <section id="blog" className=" py-40 bg-base-200 flex flex-col justify-center ">
+    <section id="blog" className=" py-20 bg-base-200 flex flex-col justify-center ">
 
                 <h1 className="text-5xl font-bold text-center">Our Top Stories</h1>
     
@@ -33,7 +34,7 @@ function Blog() {
                 </div>
 
 
-                 <a href="https://the-big-bank-theory.beehiiv.com/" className='link btn btn-neutral mx-auto text-white font-md'>Read More Articles</a>   
+                <Link href="https://the-big-bank-theory.beehiiv.com/" className='link btn btn-lg btn-neutral rounded-4xl mx-auto text-white font-md p-8'>Read More Articles</Link>   
             </section>
   )
 }
