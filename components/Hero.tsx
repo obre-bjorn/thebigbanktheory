@@ -4,7 +4,7 @@ function Hero() {
 
 
   return (
-    <section className="hero  min-h-[90vh] w-full px-4 sm:px-6 lg:px-8 ">
+    <section className="hero bg-base-100 min-h-[90vh] w-full px-4 sm:px-6 lg:px-8 ">
       <div className="hero-content flex-col lg:flex-row-reverse w-full max-w-7xl mx-auto">
         {/* Image Container - Constrained with max-width */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center max-w-[800px] lg:max-w-none lg:pl-8 ">

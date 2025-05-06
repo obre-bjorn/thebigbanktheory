@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" >
-      <body data-theme="cyberpunk" >
+      <body data-theme="cyberpunk" className="bg-white" >
         {children}
       </body>
     </html>

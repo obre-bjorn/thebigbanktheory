@@ -30,7 +30,7 @@ const Header = () => {
   };
 
   return (
-    <header  id="home" className="navbar lg:px-80 h-[10vh] w-full justify-between">
+    <header  id="home" className="navbar bg-base-100 lg:px-80 h-[10vh] w-full justify-between">
       <div className="flex">
         <Link href="/" className="flex items-center gap-2" passHref>
           <Image 
@@ -52,9 +52,15 @@ const Header = () => {
           <Link href="#blog" className="hidden lg:inline-block hover:text-primary text-2xl font-semibold">
             Blog
           </Link>
+
           <Link href="#blog" className="hidden lg:inline-block hover:text-primary text-2xl font-semibold">
             About
           </Link>
+
+          <Link href="#contact" className="hidden lg:inline-block hover:text-primary text-2xl font-semibold">
+            Contact
+          </Link>
+
         </div>
         
 
