@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import  {Montserrat, Merriweather}  from "next/font/google"
+// import  {Montserrat, Merriweather}  from "next/font/google"
 // import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 

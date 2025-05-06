@@ -130,6 +130,14 @@ const Header = () => {
                   </label>
                 </Link>
               </li>
+
+              <li>
+                <Link href="#contact" onClick={handleLinkClick} className='text-6xl font-semibold'>
+                  <label htmlFor="my-drawer" className='drawer-button'>
+                    Contact
+                  </label>
+                </Link>
+              </li>
               
               {/* <button className='btn-xl'>Subscribe</button> */}
             </ul>
