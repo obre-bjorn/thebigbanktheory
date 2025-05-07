@@ -14,6 +14,7 @@ export default function Home() {
       <>
       
         <Header/>
+        
         <Hero/>
         <Services/>
         <Blog/>
@@ -23,9 +24,5 @@ export default function Home() {
       </>
       
       
-        
-
-
-    
   );
 }

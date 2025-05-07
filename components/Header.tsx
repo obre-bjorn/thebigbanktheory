@@ -3,6 +3,7 @@
 import { useState,} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import BackToTop from './BackToTop';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -108,7 +109,14 @@ const Header = () => {
               className="drawer-overlay"
               onClick={closeDrawer}
             />
-            <ul className="menu bg-gray-950 p-4 pl-10 w-screen min-h-full  text-base-100 justify-center">
+            <ul className="menu bg-gray-950 p-4 px-10 w-screen min-h-full  text-base-100 justify-center">
+              <div className='mx-auto flex justify-center items-center  mb-15 gap-2'>
+                
+                <Image src="/images/logo_yellow.png" alt="Logo" width={40} height={40} className=''/>
+                <p>The Big Bank Theory</p>
+
+              </div>
+
               <li>
                 <Link href="#home" onClick={handleLinkClick} className='text-6xl font-semibold transition-all'>
                   Home
@@ -144,6 +152,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+      <BackToTop/>
     </header>
   );
 };
