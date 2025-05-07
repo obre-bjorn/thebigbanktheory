@@ -8,7 +8,7 @@ function Footer() {
 
     return (
 
-        <footer className="footer lg:footer-horizontal lg:footer-center  bg-neutral text-neutral-content p-10 py-20 place-items-center">
+        <footer className="footer lg:footer-horizontal lg:footer-center  bg-gray-950 text-neutral-content p-10 py-20 place-items-center">
 
             
             <aside>

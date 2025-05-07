@@ -141,7 +141,7 @@ const Header = () => {
 
               <li>
                 <Link href="#contact" onClick={handleLinkClick} className='text-6xl font-semibold'>
-                  <label htmlFor="my-drawer" className='drawer-button'>
+                  <label htmlFor="my-drawer" className='drawer-button hover:text-red-600'>
                     Contact
                   </label>
                 </Link>

@@ -34,7 +34,7 @@ function Blog() {
                 </div>
 
 
-                <Link href="https://the-big-bank-theory.beehiiv.com/" className='link btn btn-lg btn-neutral rounded-4xl mx-auto text-white font-md p-8'>Read More Articles</Link>   
+                <Link href="https://the-big-bank-theory.beehiiv.com/" className='link btn btn-lg bg-gray-950 rounded-4xl mx-auto text-white font-md p-8'>Read More Articles</Link>   
             </section>
   )
 }
