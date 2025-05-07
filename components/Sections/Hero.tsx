@@ -9,7 +9,7 @@ function Hero() {
         {/* Image Container - Constrained with max-width */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center max-w-[800px] lg:max-w-none lg:pl-8 ">
           <Image
-            src="/images/hero-noback.png"
+            src="/images/media-hero.gif"
             className="w-full h-auto object-contain rounded-lg shadow-2xl"
             width={1200}
             height={1200}
