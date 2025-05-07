@@ -33,9 +33,9 @@ export default function BackToTop() {
     <button
       onClick={scrollToTop}
       aria-label="Back to top"
-      className={`fixed bottom-8 right-8 p-3 rounded-full bg-primary text-white shadow-lg transition-opacity duration-300 ${
+      className={`fixed bottom-8 right-8 p-3 rounded-full bg-primary text-white shadow-2xl transition-opacity duration-300 ${
         isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
-      } hover:bg-primary-dark`}
+      } !hover:bg-blue-300`}
     >
       {/* <FaArrowUp className="text-xl" /> */}
       TOP

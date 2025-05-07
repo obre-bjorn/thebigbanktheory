@@ -4,7 +4,7 @@ function Hero() {
 
 
   return (
-    <section className="hero bg-base-100 min-h-[90vh] w-full px-4 sm:px-6 lg:px-8 ">
+    <section className="hero bg-base-100 min-h-[90vh] w-full px-4 lg:px-8 ">
       <div className="hero-content flex-col lg:flex-row-reverse w-full max-w-7xl mx-auto">
         {/* Image Container - Constrained with max-width */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center max-w-[800px] lg:max-w-none lg:pl-8 ">
@@ -33,14 +33,14 @@ function Hero() {
             </button>
           </a> */}
         
-        <form>
+        <form className='w-full'>
                 <h6 className="footer-title font-extrabold">Newsletter</h6>
-                <fieldset className="w-80">
-                <label className='text-lg font-bold'>Enter your email address to Subscribe</label>
-                <div className="join">
+                <fieldset className="w-full">
+                <label className='text-lg font-bold'>Subscribe to our newsletter</label>
+                <div className="flex w-full">
                     <input
                     type="text"
-                    placeholder="username@site.com"
+                    placeholder="Email Address"
                     className="input input-bordered input-lg join-item bg-white" />
                     <button className="btn btn-primary btn-lg join-item">Subscribe</button>
                 </div>
