@@ -1,7 +1,15 @@
+'use client'
 import React from 'react'
+import { motion } from "framer-motion";
+// import {motion} from 'motion/react'
+import Card from '../Card';
 import Image from 'next/image'
+import { FaWhatsapp } from 'react-icons/fa';
+
 
 function Services() {
+
+    const phoneNumber = +254792093576
 
     const services = [
         {
@@ -27,7 +35,7 @@ function Services() {
     ];
     
 
-
+    console.log('MOTION', motion.div)
 
     return (
         <section id="services" className=" py-20 px-4 bg-white container mx-auto flex flex-col ">
@@ -49,7 +57,7 @@ function Services() {
 
                 { services.map((service,index) => (
 
-                    <div className="bg-white shadow-md rounded-t-full overflow-hidden text-center  max-w-[300]" key={index}>
+                    <div className="bg-white shadow-md rounded-t-full overflow-hidden text-center  max-w-[300px] " key={index} >
                         {/* Domed Image Section */}
                             <div className="mx-auto shadow-md overflow-hidden h-80">
                                 <Image
@@ -74,8 +82,23 @@ function Services() {
 
             </div>
 
-            <h1 className='text-3xl'>Got a project in mind? Let’s talk.</h1>
-                
+            <h1 className='text-3xl mb-10'>Got a project in mind? Let’s talk.</h1>
+
+            <motion.a
+                href={`https://wa.me/${phoneNumber}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-green-500 hover:bg-green-900 text-white px-4 py-2 rounded-md transition max-w-50"
+                whileHover={{
+                    scale:1.3
+                }}
+                >
+                <FaWhatsapp size={20} />
+                Chat on WhatsApp
+            </motion.a>
+
+                <Card/>
+            
         </section>
     )
 
