@@ -7,8 +7,8 @@ function About() {
 
 
         <div className='flex items-center justify-center  flex-wrap gap-20'>
-            <div className='max-w-[600]'>
-                <Image className='object-fill mx-auto w-full' src='/images/hero-image.jpg' alt='My photo' width={500} height={500}/>
+            <div className='max-w-[600] rounded-t-full'>
+                <Image className='object-fill mx-auto w-full rounded-t-full' src='/images/me.jpg' alt='My photo' width={500} height={500}/>
             </div>
 
 
