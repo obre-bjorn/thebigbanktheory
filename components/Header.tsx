@@ -31,15 +31,15 @@ const Header = () => {
   };
 
   return (
-    <header  id="home" className="navbar bg-base-100  lg:px-40 h-[10vh] w-full justify-between">
-      <div className="flex">
+    <header  id="home" className="navbar bg-base-100  lg:px-40 h-[10vh] w-full justify-between shadow-xl">     <div className="flex">
         <Link href="/" className="flex items-center gap-2" passHref>
           <Image 
             src="/images/logo.png" 
             alt="Logo" 
-            width={40}
-            height={40}
+            width={100}
+            height={100}
             priority
+            className='max-w-[40]'
           />
 
           
@@ -54,7 +54,7 @@ const Header = () => {
             Blog
           </Link>
 
-          <Link href="#blog" className="hidden lg:inline-block hover:text-primary text-2xl font-semibold">
+          <Link href="#about" className="hidden lg:inline-block hover:text-primary text-2xl font-semibold">
             About
           </Link>
 
@@ -124,7 +124,7 @@ const Header = () => {
               </li>
 
               <li>
-                <Link href="/about" onClick={handleLinkClick} className='text-6xl font-semibold'>
+                <Link href="#about" onClick={handleLinkClick} className='text-6xl font-semibold'>
                   <label htmlFor="my-drawer" >
                     About
                   </label>
