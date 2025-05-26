@@ -4,12 +4,14 @@ function Contact() {
 
 
   return (
-    <section id="contact" className="bg-white flex flex-col lg:flex-row min-h-screen py-20 justify-center gap-10 container mx-auto">
+    <section id="contact" className="bg-white flex flex-col lg:flex-row lg:flex-row-reverse min-h-screen py-20 p-4 justify-center gap-10 container mx-auto">
         <div className="flex-1 flex flex-col gap-6">
 
             <p className='menu-title text-xl'>CONTACT US</p>
-            <p className='text-8xl'>{`Let's talk Banking`}</p>
-            <p className='text-xl'>For any inquires and questions feel free to reach out</p>
+            <p className='text-8xl'>{`Let’s connect`}</p>
+            <p className='text-xl'>Have an idea, project, or pitch? Want to collaborate or sponsor the newsletter?
+                Get in touch. I’m always up for good people and bold ideas.
+            </p>
         </div>
 
         <div className="bg-base-200 p-10 px-15 flex-1 shadow-2xl rounded-xl">

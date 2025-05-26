@@ -2,7 +2,7 @@
 import React from 'react'
 import { motion } from "framer-motion";
 // import {motion} from 'motion/react'
-import Card from '../Card';
+// import Card from '../Card';
 import Image from 'next/image'
 import { FaWhatsapp } from 'react-icons/fa';
 
@@ -90,15 +90,20 @@ function Services() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-green-500 hover:bg-green-900 text-white px-4 py-2 rounded-md transition max-w-50"
                 whileHover={{
-                    scale:1.3
+                    // scale:1.3,
+                    backgroundColor: 'black'
                 }}
                 >
                 <FaWhatsapp size={20} />
                 Chat on WhatsApp
             </motion.a>
-
+{/* 
                 <Card/>
-            
+
+                <div className="bg-red-500 hover:bg-blue-500 text-white font-bold p-10 cursor-pointer">
+      Hover me!
+    </div>
+             */}
         </section>
     )
 

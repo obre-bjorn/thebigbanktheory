@@ -31,7 +31,9 @@ const Header = () => {
   };
 
   return (
-    <header  id="home" className="navbar bg-base-100  lg:px-40 h-[10vh] w-full justify-between shadow-xl">     <div className="flex">
+    <header  id="home" className="navbar bg-[#FFB847]  lg:px-40 h-[10vh] w-full justify-between shadow-xl">     
+    
+    <div className="flex">
         <Link href="/" className="flex items-center gap-2" passHref>
           <Image 
             src="/images/logo.png" 
