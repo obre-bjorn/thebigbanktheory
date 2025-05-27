@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
 // import  {Montserrat, Merriweather}  from "next/font/google"
 // import { Geist, Geist_Mono } from "next/font/google";
+import {Lobster} from "next/font/google"
 import "./globals.css";
 
 
+
+const lobster = Lobster({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",

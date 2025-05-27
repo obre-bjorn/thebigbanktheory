@@ -16,7 +16,7 @@ function Blog() {
 
                 <div className="container mx-auto py-20 flex gap-6 flex-wrap align-center justify-center">
 
-                    <div className="p-6 bg-[#F6C103] rounded-sm min-w-[400px] max-w-[600px] shadow-md">
+                    <div className="p-6 bg-[#F6C103] rounded-sm min-w-[300px] max-w-[600px] shadow-md">
 
                         <h1 className="text-2xl font-bold text-center">What You’ll Get</h1>
 
@@ -28,7 +28,7 @@ function Blog() {
 
                     </div>
 
-                    <div className="p-6 bg-[#F6C103] rounded-sm  min-w-[400px] max-w-[600px] shadow-md">
+                    <div className="p-6 bg-[#F6C103] rounded-sm  min-w-[300px] max-w-[600px] shadow-md">
 
                         <h1 className="text-2xl font-bold text-center">Reader Favorites</h1>
 
@@ -95,7 +95,12 @@ function Blog() {
                         </div>
                     </a> */}
 
-                <motion.a className="flex flex-col sm:flex-row sm:max-w-2xl max-w-xs mx-auto overflow-hidden bg-gray-700 rounded-lg shadow-lg dark:bg-gray-800 p-2" href='https://the-big-bank-theory.beehiiv.com/p/nigerian-women-cracked-the-ceiling-621f947d113f9b1a' target='blank'>
+                <motion.a className="flex flex-col sm:flex-row sm:max-w-2xl max-w-xs mx-auto overflow-hidden bg-gray-700 rounded-lg shadow-lg dark:bg-gray-800 p-2" href='https://the-big-bank-theory.beehiiv.com/p/nigerian-women-cracked-the-ceiling-621f947d113f9b1a' target='blank' 
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, ease: 'easeOut' }}
+                    viewport={{ once: true, amount: 0.5 }}
+                >
                     <div className="p-2 sm:w-1/2">
                         <Image className="rounded object-cover w-full sm:h-80 h-60" src="https://media.beehiiv.com/cdn-cgi/image/format=auto,width=800,height=421,fit=scale-down,onerror=redirect/uploads/asset/file/86110655-b552-4118-a4b1-865e12f6037d/GJDUjVzWsAALLst.jpeg" alt="Article" width={500} height={500}/>
                     </div>

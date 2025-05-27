@@ -34,13 +34,17 @@ type AccordionItemProps = {
     onToggle,
   }) => (
     <div className="border-b">
-      <button
-        className="w-full text-left p-4 flex justify-between items-center focus:outline-none"
+      <motion.button
+        className="w-full text-left p-4 flex justify-between items-center focus:outline-none pointer"
         onClick={onToggle}
+        whileHover={{
+          backgroundColor:'yellow',
+          color:'black'
+        }}
       >
-        <span className="text-2xl font-medium">{title}</span>
+        <span className="text-2xl font-medium" >{title}</span>
         <span>{isOpen ? "-" : "+"}</span>
-      </button>
+      </motion.button>
   
       {/* Animate presence of the dropdown */}
       <AnimatePresence initial={false}>
@@ -96,25 +100,48 @@ function Partnership() {
 
 
     return (
-        <div className="min-h-screen w-full  bg-gray-100 flex flex-wrap  items-center justify-center gap-10 mx-auto p-4">
 
-            <div className='w-full lg:w-[40%] '>
+      <section className="min-h-screen w-full  bg-gray-100 mx-auto p-4 flex flex-col justify-center  gap-10">
 
-                <h1 className='text-6xl font-bold'>Partner with The Big Bank Theory</h1>
 
-                <h2 className='text-2xl mt-5'>Reach an audience that’s tuned in to the future of finance in Africa.</h2>
+          <div className="flex flex-wrap  items-center justify-center gap-10 mb-10">
+
+              <div className='w-full lg:w-[40%] '>
+
+                  <h1 className='text-6xl font-bold'>Partner with The Big Bank Theory</h1>
+
+                  <h2 className='text-2xl mt-5'>Reach an audience that’s tuned in to the future of finance in Africa.</h2>
+
+              </div>
+
+
+              <div className="w-full lg:w-[40%] flex flex-col gap-8 justify-center ">
+
+                  <h3 className='text-3xl font-semibold text-center'>Ways to collaborate</h3>
+
+                  <Accordion items={partnerships} />
+              </div>
+
+          </div>
+
+
+            <div className="container mx-auto">
+
+              <p className='text-2xl mb-10'>
+                The Big Bank Theory reaches bankers, investors, fintech execs, policy professionals, and curious readers in Nigeria, Kenya, Ghana, South Africa, the UK, and the US.
+                They are global, influential, and not here for fluff.
+              </p>
+
+
+              <p className='text-2xl  font-bold' >
+                Interested in working together? Let’s build something bold.
+              </p>
+
+
 
             </div>
 
-
-            <div className="w-full lg:w-[40%] flex flex-col gap-8 justify-center ">
-
-                <h3 className='text-3xl font-semibold text-center'>Ways to collaborate</h3>
-
-                <Accordion items={partnerships} />
-            </div>
-
-        </div>
+      </section>
     )
     }
 

@@ -1,5 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
+import { Lobster } from 'next/font/google';
+
+const lobster = Lobster({
+  weight: '400',
+  subsets: ['latin'],
+});
 
 function About() {
   return (
@@ -28,7 +34,7 @@ function About() {
 
 
                   <div className='max-w-[600]'>
-                      <h1 className='text-4xl py-10 uppercase font-bold'>Get to know the voice behind the newsletter </h1>
+                      <h1 className={`text-5xl py-10  font-bold ${lobster.className}`}>Get to know the voice behind the newsletter </h1>
                       <p className='text-xl'>
                       Hi, I’m Mercy. I’m a writer, researcher, and the voice behind The Big Bank Theory. <br/><br />
                       This newsletter was born out of two things: a deep obsession with how banking shapes opportunity in Africa, and a desire to explain it in a way that actually makes sense.

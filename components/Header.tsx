@@ -5,6 +5,20 @@ import Image from 'next/image';
 import Link from 'next/link';
 import BackToTop from './BackToTop';
 
+import {motion} from 'framer-motion'
+import { Lobster } from 'next/font/google'; 
+import {Merriweather} from 'next/font/google' 
+
+
+
+
+const lobster = Lobster({
+  weight: '400',
+  subsets: ['latin'],
+});
+
+const merriweather = Merriweather({ subsets: ['latin'], weight: ['400'] });
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -31,7 +45,7 @@ const Header = () => {
   };
 
   return (
-    <header  id="home" className="navbar bg-[#FFB847]  lg:px-40 h-[10vh] w-full justify-between shadow-xl">     
+    <header  id="home" className="navbar bg-[#FFB847]  lg:px-40 h-[10vh] w-[full] justify-between shadow-xl">     
     
     <div className="flex">
         <Link href="/" className="flex items-center gap-2" passHref>
@@ -45,23 +59,44 @@ const Header = () => {
           />
 
           
-          <p className="text-xl font-bold">The Big Bank Theory</p>
+          <p className={`text-2xl font-bold ${lobster.className}`}>The Big Bank Theory</p>
         </Link>
       </div>
       
       <div className="flex flex-none items-center gap-4">
         <div className='flex gap-4 items-center justify-center'>
 
-          <Link href="#blog" className="hidden lg:inline-block hover:text-primary text-2xl font-semibold">
-            Blog
+          <Link href="#blog" className={`hidden lg:inline-block hover:text-primary text-2xl font-semibold ${merriweather.className}`}>
+
+              <motion.div className="py-4 px-2 transition-all"
+              whileHover={{
+                textDecoration: 'underline',
+                scale: '1.2'
+              }}>
+                Blog
+              </motion.div>
           </Link>
 
-          <Link href="#about" className="hidden lg:inline-block hover:text-primary text-2xl font-semibold">
-            About
+          <Link href="#blog" className={`hidden lg:inline-block hover:text-primary text-2xl font-semibold ${merriweather.className}`}>
+            
+          <motion.div className="py-4 px-2 transition-all"
+              whileHover={{
+                textDecoration: 'underline',
+                scale: '1.2'
+              }}>
+                About
+              </motion.div>
+
           </Link>
 
-          <Link href="#contact" className="hidden lg:inline-block hover:text-primary text-2xl font-semibold">
-            Contact
+          <Link href="#blog" className={`hidden lg:inline-block hover:text-primary text-2xl font-semibold ${merriweather.className}`}>
+          <motion.div className="py-4 px-2 transition-all"
+              whileHover={{
+                textDecoration: 'underline',
+                scale: '1.2'
+              }}>
+                Contact
+              </motion.div>
           </Link>
 
         </div>
@@ -83,7 +118,7 @@ const Header = () => {
             >
               {isOpen ? (
                 <svg
-                  className="fill-base-100 "
+                  className="fill-[#F6C103]"
                   xmlns="http://www.w3.org/2000/svg"
                   width="30"
                   height="30"
@@ -93,7 +128,7 @@ const Header = () => {
                 </svg>
               ) : ( 
                 <svg
-                  className="fill-current"
+                  className="fill-[black]"
                   xmlns="http://www.w3.org/2000/svg"
                   width="30"
                   height="30"
@@ -105,7 +140,7 @@ const Header = () => {
             </label>
           </div>
           
-          <div className="drawer-side z-50">
+          <div className="drawer-side z-50 w-screen h-screen">
             <label
               htmlFor="my-drawer"
               className="drawer-overlay"
