@@ -1,11 +1,25 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
+
+// Animation
+import {motion} from 'framer-motion'
+// Fonts
 import { Lobster } from 'next/font/google';
+import { Merriweather } from 'next/font/google';
+
+
 
 const lobster = Lobster({
   weight: '400',
   subsets: ['latin'],
 });
+
+
+const merriweather = Merriweather({ subsets: ['latin'], weight: ['300'] });
+
+
 
 function About() {
   return (
@@ -28,27 +42,43 @@ function About() {
 
         {/* Content */}
         <div className='flex items-center justify-center  flex-wrap gap-20'>
-                  <div className='max-w-[600px] lg:h-[700px] overflow-hidden rounded-t-[30px] rounded-b-3xl mx-auto '>
+                  <motion.div className='max-w-[600px] lg:h-[700px] overflow-hidden rounded-t-[30px] rounded-b-3xl mx-auto' 
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, ease: 'easeOut' }}
+                    viewport={{ once: true, amount: 0.5 }}
+                  >
                       <Image className= 'object-cover mx-auto w-full h-full rounded-t-[100%] rounded-b-3xl shadow-2xl'  src='/images/me.jpg' alt='My photo' width={500} height={700}/>
-                  </div>
+                  </motion.div>
 
 
                   <div className='max-w-[600]'>
-                      <h1 className={`text-5xl py-10  font-bold ${lobster.className}`}>Get to know the voice behind the newsletter </h1>
-                      <p className='text-xl'>
-                      Hi, I’m Mercy. I’m a writer, researcher, and the voice behind The Big Bank Theory. <br/><br />
-                      This newsletter was born out of two things: a deep obsession with how banking shapes opportunity in Africa, and a desire to explain it in a way that actually makes sense.
-                      By day, I lead marketing at a tech company, helping build products and narratives that make digital tools more useful, more trusted, and more human.<br/><br/>
-                      Before that, I spent years writing across editorial, strategy, and storytelling for brands and platforms across Africa’s tech and finance space.
-                      But I kept coming back to one question: why is African banking, one of the most important economic stories of our time, still so underreported and poorly explained?
-                      <br /><br />The Big Bank Theory is my attempt to change that. 
-                      I follow the money, the policies, and the power plays shaping finance across the continent. 
-                      Each edition goes deep into a single issue or trend and breaks it down with clarity, context, and just enough edge.
-                      <br/> <br/>
-                      If you care about inclusion, infrastructure, innovation, or just want to understand how the system really works, you’re in the right place.
-                      Let’s build something smarter.
+                      <motion.h1 className={`text-5xl py-10  font-bold ${lobster.className}`}
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, ease: 'easeOut' }}
+                        viewport={{ once: true, amount: 0.5 }}
+                      >
+                        Get to know the voice behind the newsletter </motion.h1>
+                      <motion.p className={`text-xl ${merriweather.className}`}
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, ease: 'easeOut' }}
+                        viewport={{ once: true, amount: 0.5 }}
+                      >
+                        Hi, I’m Mercy. I’m a writer, researcher, and the voice behind The Big Bank Theory. <br/><br />
+                        This newsletter was born out of two things: a deep obsession with how banking shapes opportunity in Africa, and a desire to explain it in a way that actually makes sense.
+                        By day, I lead marketing at a tech company, helping build products and narratives that make digital tools more useful, more trusted, and more human.<br/><br/>
+                        Before that, I spent years writing across editorial, strategy, and storytelling for brands and platforms across Africa’s tech and finance space.
+                        But I kept coming back to one question: why is African banking, one of the most important economic stories of our time, still so underreported and poorly explained?
+                        <br /><br />The Big Bank Theory is my attempt to change that. 
+                        I follow the money, the policies, and the power plays shaping finance across the continent. 
+                        Each edition goes deep into a single issue or trend and breaks it down with clarity, context, and just enough edge.
+                        <br/> <br/>
+                        If you care about inclusion, infrastructure, innovation, or just want to understand how the system really works, you’re in the right place.
+                        Let’s build something smarter.
 
-                      </p>
+                      </motion.p>
                   </div>
 
               </div>

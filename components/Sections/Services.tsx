@@ -4,12 +4,48 @@ import { motion } from "framer-motion";
 // import {motion} from 'motion/react'
 // import Card from '../Card';
 import Image from 'next/image'
-import { FaWhatsapp } from 'react-icons/fa';
+import { FaWhatsapp,FaLinkedin,FaTwitter, FaYoutube } from 'react-icons/fa';
+
+
+const phoneNumber = +254792093576
+
+
+const socialLinks = [
+
+    {
+        href: `https://wa.me/${phoneNumber}`,
+        icon: <FaWhatsapp size={20} />,
+        label: 'Chat on WhatsApp',
+        initialBg: '#25D366',         // WhatsApp green
+        hoverBg: '#128C7E',
+    },
+    {
+        href: 'https://www.linkedin.com/in/awitiawuor/',
+        icon: <FaLinkedin size={20} />,
+        label: 'Connect on LinkedIn',
+        initialBg: '#0A66C2',        // LinkedIn blue
+        hoverBg: '#004182',
+    },
+    {
+        href: 'https://twitter.com/yourprofile',
+        icon: <FaTwitter size={20} />,
+        label: 'Follow on Twitter',
+        initialBg: '#1DA1F2',        // Twitter blue
+        hoverBg: '#0d8ddb',
+    },
+    {
+        href: 'https://youtube.com/@yourchannel',
+        icon: <FaYoutube size={20} />,
+        label: 'Subscribe on YouTube',
+        initialBg: '#FF0000',        // YouTube red
+        hoverBg: '#cc0000',
+    },
+];
 
 
 function Services() {
 
-    const phoneNumber = +254792093576
+    
 
     const services = [
         {
@@ -84,19 +120,25 @@ function Services() {
 
             <h1 className='text-3xl mb-10'>Got a project in mind? Let’s talk.</h1>
 
-            <motion.a
-                href={`https://wa.me/${phoneNumber}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-green-500 hover:bg-green-900 text-white px-4 py-2 rounded-md transition max-w-50"
-                whileHover={{
-                    // scale:1.3,
-                    backgroundColor: 'black'
-                }}
-                >
-                <FaWhatsapp size={20} />
-                Chat on WhatsApp
-            </motion.a>
+            <div className="flex flex-wrap gap-4">
+                {socialLinks.map(({ href, icon, label, initialBg, hoverBg }) => (
+                    <motion.a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-white px-4 py-2 rounded-md font-medium"
+                    style={{ backgroundColor: initialBg }}
+                    whileHover={{
+                        backgroundColor: hoverBg,
+                        scale: 1.05,
+                    }}
+                    >
+                    {icon}
+                    {label}
+                    </motion.a>
+                ))}
+            </div>
 {/* 
                 <Card/>
 

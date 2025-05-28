@@ -72,7 +72,9 @@ const Header = () => {
               whileHover={{
                 textDecoration: 'underline',
                 scale: '1.2'
-              }}>
+              }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+              >
                 Blog
               </motion.div>
           </Link>
@@ -83,7 +85,9 @@ const Header = () => {
               whileHover={{
                 textDecoration: 'underline',
                 scale: '1.2'
-              }}>
+              }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+              >
                 About
               </motion.div>
 
@@ -93,8 +97,10 @@ const Header = () => {
           <motion.div className="py-4 px-2 transition-all"
               whileHover={{
                 textDecoration: 'underline',
-                scale: '1.2'
-              }}>
+                scale: '1.2',
+              }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+              >
                 Contact
               </motion.div>
           </Link>

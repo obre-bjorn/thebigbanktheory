@@ -9,7 +9,7 @@ const lobster = Lobster({
   subsets: ['latin'],
 });
 
-const merriweather = Merriweather({ subsets: ['latin'], weight: ['400'] });
+const merriweather = Merriweather({ subsets: ['latin'], weight: ['300'] });
 
 function Hero() {
   return (
@@ -19,7 +19,13 @@ function Hero() {
       {/* 🔤 Main Content */}
       <div className="hero-content flex-col lg:flex-row-reverse w-full max-w-7xl mx-auto z-20 relative ">
         {/* 🖼 Image */}
-        <div className="w-full lg:w-1/2 flex flex-col justify-center max-w-[800px] lg:max-w-none lg:pl-8 z-20">
+        <motion.div className="w-full lg:w-1/2 flex flex-col justify-center max-w-[800px] lg:max-w-none lg:pl-8 z-20"
+          initial={{ opacity: 0, scale: 0}}
+          whileInView={{ opacity: 1, scale:1 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          viewport={{ once: false, amount: 0.5 }}
+        
+        >
           <Image
             src="/images/media-hero.gif"
             className="w-full h-auto object-contain rounded-lg shadow-2xl"
@@ -28,18 +34,25 @@ function Hero() {
             alt="Hero welcome image"
             priority
           />
-        </div>
+        </motion.div>
 
         {/* 📃 Text & Form */}
         <div className="w-full lg:w-1/2 z-20 text-white drop-shadow-[0_1px_3px_rgba(255,255,255,0.6)]">
           <motion.h1 className={`text-3xl md:text-4xl lg:text-7xl font-bold leading-tight mb-4 text-[#010101] ${lobster.className}`} 
-           initial={{ opacity: 0, y: -50 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           transition={{ duration: 0.6, ease: 'easeOut' }}
-           viewport={{ once: false, amount: 0.5 }}
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            viewport={{ once: false, amount: 0.5 }}
           
           >
-            Telling the real story of African Banking
+            Telling the real story of <motion.span className='' 
+              initial={{ color: '#000000'}}
+              whileInView={{  color: '#FFB847'}}
+              transition={{ duration: 1, ease: 'easeOut' }}
+              viewport={{ once: false, amount: 0.5 }}
+            >
+                African Banking
+              </motion.span>
           </motion.h1>
           <motion.p className={`py-6 text-lg md:text-2xl lg:text-2xl font-semibold text-[#010101] ${merriweather.className}`}  
           initial={{ opacity: 0, x: -50 }}
