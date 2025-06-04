@@ -1,89 +1,81 @@
-'use client'
+'use client';
+
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import {Merriweather} from 'next/font/google'
-import { Lobster } from 'next/font/google';
-
-const lobster = Lobster({
-  weight: '400',
-  subsets: ['latin'],
-});
+import { Merriweather } from 'next/font/google';
 
 const merriweather = Merriweather({ subsets: ['latin'], weight: ['300'] });
 
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.3, // delay between child animations
+    },
+  },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+};
+
+const scaleUp = {
+  hidden: { opacity: 0, scale: 0.9 },
+  show: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: 'easeOut' } },
+};
+
 function Hero() {
   return (
-    <section className="hero relative min-h-[100vh] w-full px-4 lg:px-8 overflow-hidden ">
-
-
-      {/* 🔤 Main Content */}
-      <div className="hero-content flex-col lg:flex-row-reverse w-full max-w-7xl mx-auto z-20 relative ">
+    <section className="hero relative min-h-screen w-full px-4 overflow-hidden">
+      <motion.div
+        className="hero-content flex-col-reverse lg:flex-row-reverse w-full max-w-7xl mx-auto z-20 relative mt-[10vh]"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.4 }}
+      >
         {/* 🖼 Image */}
-        <motion.div className="w-full lg:w-1/2 flex flex-col justify-center max-w-[800px] lg:max-w-none lg:pl-8 z-20"
-          initial={{ opacity: 0, scale: 0}}
-          whileInView={{ opacity: 1, scale:1 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
-          viewport={{ once: false, amount: 0.5 }}
-        
+        <motion.div
+          className="w-full lg:w-1/2 flex flex-col py-10 justify-center items-center max-w-[800px] bg-[#FFDE59] rounded-full will-change-transform"
+          variants={scaleUp}
         >
           <Image
-            src="/images/media-hero.gif"
-            className="w-full h-auto object-contain rounded-lg shadow-2xl"
-            width={1800}
-            height={1800}
+            src="/images/hero-noback.webp"
+            className="w-full h-auto object-contain mx-auto rounded-lg"
+            width={300}
+            height={300}
             alt="Hero welcome image"
-            priority
+            priority={false}
           />
         </motion.div>
 
-        {/* 📃 Text & Form */}
-        <div className="w-full lg:w-1/2 z-20 text-white drop-shadow-[0_1px_3px_rgba(255,255,255,0.6)]">
-          <motion.h1 className={`text-3xl md:text-4xl lg:text-7xl font-bold leading-tight mb-4 text-[#010101] ${lobster.className}`} 
-            initial={{ opacity: 0, y: -50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
-            viewport={{ once: false, amount: 0.5 }}
-          
-          >
-            Telling the real story of <motion.span className='' 
-              initial={{ color: '#000000'}}
-              whileInView={{  color: '#FFB847'}}
-              transition={{ duration: 1, ease: 'easeOut' }}
-              viewport={{ once: false, amount: 0.5 }}
-            >
-                African Banking
-              </motion.span>
-          </motion.h1>
-          <motion.p className={`py-6 text-lg md:text-2xl lg:text-2xl font-semibold text-[#010101] ${merriweather.className}`}  
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
-          viewport={{ once: false, amount: 0.5 }}
-          >
-            Money, power, and policy. The Big Bank Theory explains what’s shaping African finance and who it’s leaving behind.
-          </motion.p>
+        {/* 📃 Text & CTA */}
+        <motion.div
+          className="w-full lg:w-1/2 z-20 text-white drop-shadow-[0_1px_3px_rgba(255,255,255,0.6)]"
+          variants={fadeUp}
+        >
+          <h1 className="text-3xl md:text-4xl lg:text-7xl font-bold leading-tight mb-4 text-[#010101]">
+            Telling the real story of{' '}
+            <span className="text-[#FFDE59]">African Banking</span>
+          </h1>
 
-          {/* 📬 Newsletter Form */}
-          <form className='w-full'>
-            <h6 className="font-extrabold text-lg mb-1">Newsletter</h6>
-            <label className={`font-bold mb-2 inline-block text-yellow-500 text-3xl ${merriweather.className}`}>Start reading the newsletter</label>
-            <div className="flex w-full">
-              <input
-                type="text"
-                placeholder="Email Address"
-                className="input input-bordered input-lg bg-white text-black w-full max-w-xs"
-              />
-              <motion.button className="btn bg-yellow-500 hover:bg-yellow-600 text-black btn-lg ml-2 border-0"
-                  whileHover={{
-                    backgroundColor: 'black',
-                    color: 'white'
-                  }}>
-                Subscribe
-              </motion.button>
-            </div>
-          </form>
-        </div>
-      </div>
+          <p className="py-6 text-lg md:text-2xl font-semibold text-[#010101]">
+            Money, power, and policy. The Big Bank Theory explains what’s shaping African finance and who it’s leaving behind.
+          </p>
+
+          <label className={`font-bold mb-4 inline-block text-yellow-500 text-3xl ${merriweather.className}`}>
+            Start reading the newsletter
+          </label>
+
+          <motion.button
+            className="btn bg-[#FFFC00] btn-lg border-0 ml-2"
+            whileHover={{ backgroundColor: 'black', color: 'white' }}
+          >
+            Subscribe
+          </motion.button>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

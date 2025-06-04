@@ -6,18 +6,8 @@ import Link from 'next/link';
 import BackToTop from './BackToTop';
 
 import {motion} from 'framer-motion'
-import { Lobster } from 'next/font/google'; 
-import {Merriweather} from 'next/font/google' 
 
 
-
-
-const lobster = Lobster({
-  weight: '400',
-  subsets: ['latin'],
-});
-
-const merriweather = Merriweather({ subsets: ['latin'], weight: ['400'] });
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -45,107 +35,120 @@ const Header = () => {
   };
 
   return (
-    <header  id="home" className="navbar bg-[#FFB847]  lg:px-40 h-[10vh] w-[full] justify-between shadow-xl">     
-    
-    <div className="flex">
-        <Link href="/" className="flex items-center gap-2" passHref>
-          <Image 
-            src="/images/logo.png" 
-            alt="Logo" 
-            width={100}
-            height={100}
-            priority
-            className='max-w-[40]'
-          />
+    <header  id="home" className=" bg-[#FFDE59]   h-[10vh] w-screen shadow-xl fixed z-45">
 
-          
-          <p className={`text-2xl font-bold ${lobster.className}`}>The Big Bank Theory</p>
-        </Link>
-      </div>
-      
-      <div className="flex flex-none items-center gap-4">
-        <div className='flex gap-4 items-center justify-center'>
 
-          <Link href="#blog" className={`hidden lg:inline-block hover:text-primary text-2xl font-semibold ${merriweather.className}`}>
+    <div className="container mx-auto navbar justify-between">
+        <div className="flex">
+            <Link href="/" className="flex items-center gap-2" passHref>
+              <Image 
+                src="/images/logo.webp" 
+                alt="Logo" 
+                width={40}
+                height={40}
+                priority={false}
+                className='max-w-[40]'
+              />
 
-              <motion.div className="py-4 px-2 transition-all"
-              whileHover={{
-                textDecoration: 'underline',
-                scale: '1.2'
-              }}
-              transition={{ duration: 0.6, ease: 'easeOut' }}
-              >
-                Blog
-              </motion.div>
-          </Link>
-
-          <Link href="#blog" className={`hidden lg:inline-block hover:text-primary text-2xl font-semibold ${merriweather.className}`}>
-            
-          <motion.div className="py-4 px-2 transition-all"
-              whileHover={{
-                textDecoration: 'underline',
-                scale: '1.2'
-              }}
-              transition={{ duration: 0.6, ease: 'easeOut' }}
-              >
-                About
-              </motion.div>
-
-          </Link>
-
-          <Link href="#blog" className={`hidden lg:inline-block hover:text-primary text-2xl font-semibold ${merriweather.className}`}>
-          <motion.div className="py-4 px-2 transition-all"
-              whileHover={{
-                textDecoration: 'underline',
-                scale: '1.2',
-              }}
-              transition={{ duration: 0.6, ease: 'easeOut' }}
-              >
-                Contact
-              </motion.div>
-          </Link>
-
-        </div>
-        
-
-        <div className="drawer drawer-end ">
-          <input 
-            id="my-drawer" 
-            type="checkbox" 
-            className="drawer-toggle" 
-            // onChange={toggleDrawer}
-          />
-          
-          <div className="drawer-content lg:hidden">
-            <label htmlFor='my-drawer'
-              className=" btn-ghost btn-xl btn-circle swap swap-rotate z-55"
-              onClick={toggleDrawer}
-              aria-label={isOpen ? "Close menu" : "Open menu"}
-            >
-              {isOpen ? (
-                <svg
-                  className="fill-[#F6C103]"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="30"
-                  viewBox="0 0 512 512"
-                >
-                  <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
-                </svg>
-              ) : ( 
-                <svg
-                  className="fill-[black]"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="30"
-                  viewBox="0 0 512 512"
-                >
-                  <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
-                </svg>
-              ) }
-            </label>
+              
+              <p className={`text-2xl font `}>The Big Bank Theory</p>
+            </Link>
           </div>
           
+          <div className="flex flex-none items-center gap-4">
+            <div className='flex gap-4 items-center justify-center'>
+
+              <Link href="#blog" className={`hidden lg:inline-block hover:text-primary text-2xl font-semibold `}>
+
+                  <motion.div className="py-4 px-2 transition-all"
+                  whileHover={{
+                    textDecoration: 'underline',
+                    scale: '1.2'
+                  }}
+                  transition={{ duration: 0.6, ease: 'easeOut' }}
+                  >
+                    Newsletter
+                  </motion.div>
+              </Link>
+
+              <Link href="#about" className={`hidden lg:inline-block hover:text-primary text-2xl font-semibold`}>
+                
+              <motion.div className="py-4 px-2 transition-all"
+                  whileHover={{
+                    textDecoration: 'underline',
+                    scale: '1.2'
+                  }}
+                  transition={{ duration: 0.6, ease: 'easeOut' }}
+                  >
+                    About
+                  </motion.div>
+
+              </Link>
+
+              <Link href="#partnerships" className={`hidden lg:inline-block hover:text-primary text-2xl font-semibold`}>
+                
+              <motion.div className="py-4 px-2 transition-all"
+                  whileHover={{
+                    textDecoration: 'underline',
+                    scale: '1.2'
+                  }}
+                  transition={{ duration: 0.6, ease: 'easeOut' }}
+                  >
+                    Partnership
+                  </motion.div>
+
+              </Link>
+
+              <Link href="#contact" className={`hidden lg:inline-block hover:text-primary text-2xl font-semibold `}>
+              <motion.div className="py-4 px-2 transition-all"
+                  whileHover={{
+                    textDecoration: 'underline',
+                    scale: '1.2',
+                  }}
+                  transition={{ duration: 0.6, ease: 'easeOut' }}
+                  >
+                    Contact
+                  </motion.div>
+              </Link>
+
+              <div className="drawer drawer-end ">
+                <input 
+                  id="my-drawer" 
+                  type="checkbox" 
+                  className="drawer-toggle" 
+                  // onChange={toggleDrawer}
+                />
+                
+                <div className="drawer-content lg:hidden">
+                  <label htmlFor='my-drawer'
+                    className=" btn-ghost btn-xl btn-circle swap swap-rotate z-55"
+                    onClick={toggleDrawer}
+                    aria-label={isOpen ? "Close menu" : "Open menu"}
+                  >
+                    {isOpen ? (
+                      <svg
+                        className="fill-[#F6C103]"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="30"
+                        viewBox="0 0 512 512"
+                      >
+                        <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
+                      </svg>
+                    ) : ( 
+                      <svg
+                        className="fill-[black]"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="30"
+                        viewBox="0 0 512 512"
+                      >
+                        <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
+                      </svg>
+                    ) }
+                  </label>
+                </div>
+
           <div className="drawer-side z-50 w-screen h-screen">
             <label
               htmlFor="my-drawer"
@@ -193,9 +196,15 @@ const Header = () => {
               {/* <button className='btn-xl'>Subscribe</button> */}
             </ul>
           </div>
-        </div>
+
       </div>
+        </div>
       <BackToTop/>
+      </div>
+            </div>
+            
+
+          
     </header>
   );
 };

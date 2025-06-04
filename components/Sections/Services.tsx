@@ -50,22 +50,22 @@ function Services() {
     const services = [
         {
             title: "Editorial strategy and ghostwriting",
-            src: "/images/editorial.jpg",
+            src: "/images/editorial.webp",
             description: "From founder letters to whitepapers, I write with authority, warmth, and insight. Perfect for leaders with something to say."
         },
         {
             title: "Research and insight briefs",
-            src: "/images/research.jpg",
+            src: "/images/research.webp",
             description: "Custom, digestible research on African banking trends, policies, or sectors. Built for busy execs and smart teams."
         },
         {
             title: "Brand storytelling and content design",
-            src: "/images/story.jpg",
+            src: "/images/story.webp",
             description: "Especially for fintechs, digital banks, and mission-driven orgs. I craft narratives that inform, inspire, and move people to act."
         },
         {
             title: "Speaking and moderation",
-            src: "/images/speak.jpg",
+            src: "/images/speak.webp",
             description: "I speak and host conversations on financial inclusion, digital infrastructure, gender gaps, and the future of African banking"
         }
     ];
@@ -97,8 +97,8 @@ function Services() {
                         {/* Domed Image Section */}
                             <div className="mx-auto shadow-md overflow-hidden h-80">
                                 <Image
-                                    width={1500}
-                                    height={1500}
+                                    width={500}
+                                    height={500}
                                     src={service.src}
                                     alt={service.title}
                                     className="w-full h-full object-fill"

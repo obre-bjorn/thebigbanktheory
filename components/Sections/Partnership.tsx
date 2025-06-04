@@ -101,7 +101,7 @@ function Partnership() {
 
     return (
 
-      <section className="min-h-screen w-full  bg-gray-100 mx-auto p-4 flex flex-col justify-center  gap-10">
+      <section id= "partnerships" className="min-h-screen w-full  bg-gray-100 mx-auto p-4 flex flex-col justify-center  gap-10">
 
 
           <div className="flex flex-wrap  items-center justify-center gap-10 mb-10">

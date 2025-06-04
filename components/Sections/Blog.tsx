@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { FaMoneyBill } from 'react-icons/fa';
 
 import { motion } from "framer-motion";
 
@@ -16,19 +17,19 @@ function Blog() {
 
                 <div className="container mx-auto py-20 flex gap-6 flex-wrap align-center justify-center">
 
-                    <div className="p-6 bg-[#F6C103] rounded-sm min-w-[300px] max-w-[600px] shadow-md">
+                    <div className="p-6 bg-[#FFDE59] rounded-sm min-w-[300px] max-w-[600px] shadow-md">
 
                         <h1 className="text-2xl font-bold text-center">What You’ll Get</h1>
 
-                        <ul className='mx-auto list-disc p-6 lg:text-xl flex flex-col gap-3'>
-                            <li>Deep dives on central bank policy, credit access, fintech regulation, and more</li>
+                        <ul className='mx-auto  p-6 lg:text-xl flex flex-col gap-3'>
+                            <li><span><FaMoneyBill/> Deep dives on central bank policy, credit access, fintech regulation, and more </span></li>
                             <li>Fresh takes on leadership moves and market shifts</li>
                             <li>Stories that connect the dots between power and policy</li>
                         </ul>
 
                     </div>
 
-                    <div className="p-6 bg-[#F6C103] rounded-sm  min-w-[300px] max-w-[600px] shadow-md">
+                    <div className="p-6 bg-[#FFDE59] rounded-sm  min-w-[300px] max-w-[600px] shadow-md">
 
                         <h1 className="text-2xl font-bold text-center">Reader Favorites</h1>
 
