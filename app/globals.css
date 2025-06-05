@@ -10,11 +10,16 @@
 
 }
 
-body{ 
-  margin:0;
-  position: relative;
+html, body {
+  background-color: white !important;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
+body{
+  position: relative;
+}
 
 .custom-curve::after {
   content: "";

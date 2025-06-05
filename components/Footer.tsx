@@ -22,7 +22,7 @@ function Footer() {
                 </p>
             </aside>
 
-
+{/* 
             <nav>
                 <h6 className="footer-title w-full text-center">Social</h6>
 
@@ -90,7 +90,7 @@ function Footer() {
                         <button className="btn btn-primary join-item">Subscribe</button>
                     </div>
                 </fieldset>
-            </form>
+            </form> */}
             
             <p >Copyright © {new Date().getFullYear()} - All right reserved</p>
     </footer> 

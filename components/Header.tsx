@@ -35,11 +35,11 @@ const Header = () => {
   };
 
   return (
-    <header  id="home" className=" bg-[#FFDE59]   h-[10vh] w-screen shadow-xl fixed z-45">
+    <header  id="home" className=" bg-[#FFFFFF] h-[10vh] min-h-10 w-screen  fixed z-45">
 
 
-    <div className="container mx-auto navbar justify-between">
-        <div className="flex">
+    <div className="container mx-auto navbar justify-between items-center">
+        <div className="flex bg-[#FFDE59] py-3 px-6 rounded-md">
             <Link href="/" className="flex items-center gap-2" passHref>
               <Image 
                 src="/images/logo.webp" 
@@ -51,16 +51,16 @@ const Header = () => {
               />
 
               
-              <p className={`text-2xl font `}>The Big Bank Theory</p>
+              <p className={`text-xl font-bold `}>The Big Bank Theory</p>
             </Link>
           </div>
           
           <div className="flex flex-none items-center gap-4">
             <div className='flex gap-4 items-center justify-center'>
 
-              <Link href="#blog" className={`hidden lg:inline-block hover:text-primary text-2xl font-semibold `}>
+              <Link href="#blog" className={`hidden lg:inline-block  text-2xl font-semibold `}>
 
-                  <motion.div className="py-4 px-2 transition-all"
+                  <motion.div className="py-4 px-2 transition-all "
                   whileHover={{
                     textDecoration: 'underline',
                     scale: '1.2'
@@ -71,7 +71,7 @@ const Header = () => {
                   </motion.div>
               </Link>
 
-              <Link href="#about" className={`hidden lg:inline-block hover:text-primary text-2xl font-semibold`}>
+              <Link href="#about" className={`hidden lg:inline-block  text-2xl font-semibold`}>
                 
               <motion.div className="py-4 px-2 transition-all"
                   whileHover={{
@@ -85,7 +85,7 @@ const Header = () => {
 
               </Link>
 
-              <Link href="#partnerships" className={`hidden lg:inline-block hover:text-primary text-2xl font-semibold`}>
+              <Link href="#partnerships" className={`hidden lg:inline-block  text-2xl font-semibold`}>
                 
               <motion.div className="py-4 px-2 transition-all"
                   whileHover={{
@@ -99,7 +99,7 @@ const Header = () => {
 
               </Link>
 
-              <Link href="#contact" className={`hidden lg:inline-block hover:text-primary text-2xl font-semibold `}>
+              <Link href="#contact" className={`hidden lg:inline-block  text-2xl font-semibold `}>
               <motion.div className="py-4 px-2 transition-all"
                   whileHover={{
                     textDecoration: 'underline',
@@ -165,7 +165,7 @@ const Header = () => {
 
               <li>
                 <Link href="#home" onClick={handleLinkClick} className='text-6xl font-semibold transition-all'>
-                  Home
+                  Newsletter
                 </Link>
               </li>
 
@@ -180,7 +180,7 @@ const Header = () => {
               <li>
                 <Link href="#blog" onClick={handleLinkClick} className='text-6xl font-semibold'>
                   <label htmlFor="my-drawer" className='drawer-button'>
-                    Blog
+                    Patrnership
                   </label>
                 </Link>
               </li>
