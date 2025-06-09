@@ -112,7 +112,7 @@ const Accordion: FC<AccordionProps> = ({ items }) => {
 function Partnership() {
   return (
     <section
-      id="partnerships"
+      id="partnership"
       className="min-h-screen w-full bg-gray-50 mx-auto p-8 flex flex-col justify-center gap-16"
     >
       <div className="flex flex-wrap items-center justify-center gap-16 mb-12 max-w-6xl mx-auto">

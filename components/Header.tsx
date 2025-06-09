@@ -58,7 +58,7 @@ const Header = () => {
           <div className="flex flex-none items-center gap-4">
             <div className='flex gap-4 items-center justify-center'>
 
-              <Link href="#blog" className={`hidden lg:inline-block  text-2xl font-semibold `}>
+              <Link href="#newsletter" className={`hidden lg:inline-block  text-2xl font-semibold `}>
 
                   <motion.div className="py-4 px-2 transition-all "
                   whileHover={{
@@ -85,7 +85,7 @@ const Header = () => {
 
               </Link>
 
-              <Link href="#partnerships" className={`hidden lg:inline-block  text-2xl font-semibold`}>
+              <Link href="#partnership" className={`hidden lg:inline-block  text-2xl font-semibold`}>
                 
               <motion.div className="py-4 px-2 transition-all"
                   whileHover={{
@@ -158,19 +158,19 @@ const Header = () => {
             <ul className="menu bg-gray-950 p-4 px-10 w-screen min-h-full  text-base-100 justify-center">
               <div className='mx-auto flex justify-center items-center  mb-15 gap-2'>
                 
-                <Image src="/images/logo_yellow.png" alt="Logo" width={40} height={40} className=''/>
+                <Image src="/images/logo_yellow.webp" alt="Logo" width={40} height={40} className=''/>
                 <p>The Big Bank Theory</p>
 
               </div>
 
               <li>
-                <Link href="#home" onClick={handleLinkClick} className='text-6xl font-semibold transition-all'>
+                <Link href="#newsletter" onClick={handleLinkClick} className='text-5xl font-semibold transition-all'>
                   Newsletter
                 </Link>
               </li>
 
               <li>
-                <Link href="#about" onClick={handleLinkClick} className='text-6xl font-semibold'>
+                <Link href="#about" onClick={handleLinkClick} className='text-5xl font-semibold'>
                   <label htmlFor="my-drawer" >
                     About
                   </label>
@@ -178,15 +178,15 @@ const Header = () => {
               </li>
 
               <li>
-                <Link href="#blog" onClick={handleLinkClick} className='text-6xl font-semibold'>
+                <Link href="#partnership" onClick={handleLinkClick} className='text-5xl font-semibold'>
                   <label htmlFor="my-drawer" className='drawer-button'>
-                    Patrnership
+                    Partnership
                   </label>
                 </Link>
               </li>
 
               <li>
-                <Link href="#contact" onClick={handleLinkClick} className='text-6xl font-semibold'>
+                <Link href="#contact" onClick={handleLinkClick} className='text-5xl font-semibold'>
                   <label htmlFor="my-drawer" className='drawer-button hover:text-red-600'>
                     Contact
                   </label>

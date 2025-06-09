@@ -59,7 +59,7 @@ function About() {
             <br /><br />
             By day, I lead marketing at a tech firm, weaving human stories into product strategy. By night (and newsletter mornings), I trace the currents of cash, policy, and promise across the continent’s financial infrastructure.
             <br /><br />
-            I’ve spent years writing across Africa’s tech and finance space — strategy decks, editorial reports, brand narratives — but one question kept echoing:
+            {/* I’ve spent years writing across Africa’s tech and finance space — strategy decks, editorial reports, brand narratives — but one question kept echoing: */}
           </p>
         </motion.div>
       </div>

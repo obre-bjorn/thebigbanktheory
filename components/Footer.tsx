@@ -14,7 +14,7 @@ function Footer() {
             <aside>
 
                 <Link href="#home" className='flex items-center gap-4'>
-                    <Image width="50" height="50" src="/images/logo_yellow.png" alt="Logo" />
+                    <Image width="50" height="50" src="/images/logo_yellow.webp" alt="Logo" />
                     <p>The Big Bank Theory</p>
                 </Link>
                 <p>
