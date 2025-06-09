@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { FaMoneyBill } from 'react-icons/fa';
 
 import { motion } from "framer-motion";
-import { article } from 'framer-motion/client';
+
 
 
 const articles =  [
