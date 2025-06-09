@@ -40,30 +40,33 @@ const articles =  [
 function Blog() {
 
   return (
-    <section id="newsletter" className=" mx-auto py-20 px-4 flex flex-col justify-center relative">
+    <section id="newsletter" className=" mx-auto py-20 px-4 flex flex-col justify-center items-center relative">
 
 
                 {/* <h1 className="text-5xl  font-bold text-center mb-6">The newsletter breaking down African finance with clarity and bite</h1> */}
 
-                <div className="container mx-auto py-20 flex gap-6 flex-wrap align-center justify-center">
+                <div className="container mx-auto py-20 flex gap-6 flex-wrap align-center justify-between items-center">
 
-                <div className="bg-[#FFDE59] text-black rounded-2xl shadow-xl p-8 min-w-[300px] max-w-[600px] w-full transition-transform hover:scale-[1.02] hover:shadow-2xl">
-        <h1 className="text-3xl font-extrabold text-center mb-6">What You’ll Get</h1>
-        <ul className="space-y-6 text-lg font-medium">
-          {[
-            "Deep dives on central bank policy, credit access, fintech regulation, and more",
-            "Fresh takes on leadership moves and market shifts",
-            "Stories that connect the dots between power and policy"
-          ].map((item, idx) => (
-            <li key={idx} className="flex items-start gap-4">
-              <span className="bg-white text-green-700 p-2 rounded-full shadow-md">
-                <FaMoneyBill className="text-xl" />
-              </span>
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
+
+                  <h1 className='text-black font-bold text-5xl h-full mx-auto bg-[#FFDE59] p-10 rounded-4xl border-4'>Newsletter</h1>
+
+                <div className="bg-[#FFDE59] text-black rounded-2xl shadow-xl p-8 min-w-[300px] max-w-[600px] w-full transition-transform hover:scale-[1.02] hover:shadow-2xl mx-auto">
+                  <h1 className="text-3xl font-extrabold text-center mb-6">What You’ll Get</h1>
+                  <ul className="space-y-6 text-lg font-medium">
+                    {[
+                      "Deep dives on central bank policy, credit access, fintech regulation, and more",
+                      "Fresh takes on leadership moves and market shifts",
+                      "Stories that connect the dots between power and policy"
+                    ].map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-4">
+                        <span className="bg-white text-green-700 p-2 rounded-full shadow-md">
+                          <FaMoneyBill className="text-xl" />
+                        </span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
       {/* Card 2 */}
       {/* <div className="bg-[#FFDE59] text-black rounded-2xl shadow-xl p-8 min-w-[300px] max-w-[600px] w-full transition-transform hover:scale-[1.02] hover:shadow-2xl">
