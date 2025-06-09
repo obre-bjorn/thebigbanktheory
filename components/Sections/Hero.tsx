@@ -86,14 +86,14 @@ function Hero() {
           className="w-full max-w-3xl "
           frameBorder="0"
           scrolling="no"
-          style={{
-            width: '100%',
-            height: '320px',
-            // margin: '0 auto',
-            borderRadius: '8px',
-            backgroundColor: 'transparent',
-            boxShadow: '0 0 #0000',
-          }}
+          // style={{
+          //   width: '100%',
+          //   height: '320px',
+          //   // margin: '0 auto',
+          //   borderRadius: '8px',
+          //   backgroundColor: 'transparent',
+          //   boxShadow: '0 0 #0000',
+          // }}
         />
       </div>
         </motion.div>
