@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -24,15 +24,15 @@ const scaleUp = {
 };
 
 function Hero() {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://subscribe-forms.beehiiv.com/embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  // useEffect(() => {
+  //   const script = document.createElement('script');
+  //   script.src = 'https://subscribe-forms.beehiiv.com/embed.js';
+  //   script.async = true;
+  //   document.body.appendChild(script);
+  //   return () => {
+  //     document.body.removeChild(script);
+  //   };
+  // }, []);
 
   return (
     <section className="hero bg-[#FFFFFF] relative min-h-screen w-full px-4 overflow-hidden ">
@@ -80,7 +80,7 @@ function Hero() {
             </a>
           </motion.button> */}
 
-      <div className="w-full">
+      <div className="w-full ">
         <iframe
           src="https://subscribe-forms.beehiiv.com/3f3a20ea-54a5-447a-9f54-1bdfc0e19586"
           className="w-full max-w-3xl "
