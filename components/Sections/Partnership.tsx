@@ -141,7 +141,7 @@ function Partnership() {
           for fluff.
         </p>
 
-        <p className="mt-10 text-lg sm:text-2xl font-bold text-[#FFDE59] bg-black p-4 rounded-xl shadow-2xl">
+        <p className="mt-10 text-lg sm:text-2xl font-bold text-black bg-[#FFDE59] p-4 rounded-xl shadow-2xl">
           Interested in working together? Let’s build something bold.
         </p>
       </div>

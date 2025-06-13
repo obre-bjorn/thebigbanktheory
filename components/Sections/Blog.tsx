@@ -48,7 +48,7 @@ function Blog() {
                 <div className="container mx-auto py-20 flex gap-6 flex-wrap align-center justify-between items-center">
 
 
-                  <h1 className='text-black font-bold text-5xl h-full mx-auto bg-[#FFDE59] p-10 rounded-4xl border-4'>Newsletter</h1>
+                  <h1 className='text-black font-bold text-5xl h-full mx-auto bg-[#FFDE59] p-10 rounded-4xl shadow-2xl'>Newsletter</h1>
 
                 <div className="bg-[#FFDE59] text-black rounded-2xl shadow-xl p-8 min-w-[300px] max-w-[600px] w-full transition-transform hover:scale-[1.02] hover:shadow-2xl mx-auto">
                   <h1 className="text-3xl font-extrabold text-center mb-6">What You’ll Get</h1>
@@ -198,7 +198,7 @@ function Blog() {
                 <Link href="https://the-big-bank-theory.beehiiv.com/" className='mx-auto'>
                 
                     <motion.button 
-                        className="link btn btn-lg bg-[#FFDE59] rounded-4xl text-black font-md p-8 border-0"
+                        className="link btn btn-lg bg-[#FFDE59] rounded-4xl text-black font-md p-8 border-0 shadow-xl"
                         whileHover={{
                             backgroundColor: 'black',
                             color:'white'

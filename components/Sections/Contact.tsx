@@ -8,7 +8,7 @@ function Contact() {
         {/* Left Column */}
         <div className="flex-1 flex flex-col gap-6">
             <p className="menu-title text-xl">CONTACT US</p>
-            <h1 className="text-5xl md:text-8xl font-bold">{`Let’s connect`}</h1>
+            <h1 className="text-5xl md:text-5xl font-bold">{`Let’s connect`}</h1>
             <p className="text-xl">
             Have an idea, project, or pitch? Want to collaborate or sponsor the newsletter?
             Get in touch. I’m always up for good people and bold ideas.
@@ -101,10 +101,7 @@ function Contact() {
             ></textarea>
 
             {/* Submit Button */}
-            <button
-                type="submit"
-                className="btn btn-lg btn-neutral rounded-3xl text-white font-medium px-6 py-3 w-fit mt-4 shadow-xl"
-            >
+            <button type="submit" className="btn btn-lg btn-neutral rounded-3xl text-white font-medium px-6 py-3 w-fit mt-4 shadow-xl">
                 Send message
             </button>
             </form>
