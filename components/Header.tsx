@@ -195,20 +195,23 @@ const Header = () => {
               <div className=' w-full  flex items-center justify-center mb-12 gap-2'>
                 
                   <Image src="/images/logo.webp" alt="Logo" width={40} height={40} />
-                <p className='text-[#010101]'>The Big Bank Theory</p>
+                <p className='text-[#010101] font-bold'>The Big Bank Theory</p>
+
+              </div>
+              <div className='mx-auto w-full mt-10'>
+                {navs.map((nav) => (
+                  <li key={nav.name}>
+                    <Link href={nav.url} onClick={handleLinkClick} className='text-4xl font-semibold text-[#010101]'>
+                      {nav.icon}
+                      <label htmlFor="my-drawer" className='drawer-button'>
+                        {nav.name}
+                      </label>
+                    </Link>
+                  </li>
+                ))}
 
               </div>
 
-              {navs.map((nav) => (
-                <li key={nav.name}>
-                  <Link href={nav.url} onClick={handleLinkClick} className='text-4xl font-semibold text-[#010101]'>
-                    {nav.icon}
-                    <label htmlFor="my-drawer" className='drawer-button'>
-                      {nav.name}
-                    </label>
-                  </Link>
-                </li>
-              ))}
               
               {/* <button className='btn-xl'>Subscribe</button> */}
 
