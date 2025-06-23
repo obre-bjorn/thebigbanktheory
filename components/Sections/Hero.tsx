@@ -3,6 +3,7 @@
 // import { useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const container = {
   hidden: {},
@@ -71,16 +72,15 @@ function Hero() {
             Money, power, and policy. The Big Bank Theory explains what’s shaping African finance and who it’s leaving behind.
           </p>
 
-          {/* <motion.button
-            className="btn bg-[#FFDE59] btn-lg border-0 w-full rounded-xl"
-            whileHover={{ backgroundColor: 'black', color: 'white' }}
-          >
-            <a href="https://the-big-bank-theory.beehiiv.com/" target="_blank" rel="noopener noreferrer">
-              Subscribe
-            </a>
-          </motion.button> */}
+          <Link href="https://the-big-bank-theory.beehiiv.com/" target="_blank" rel="noopener noreferrer">
+            <motion.button className="btn bg-[#FFDE59] btn-lg border-0 w-full rounded-xl"
+              whileHover={{ backgroundColor: 'black', color: 'white' }}
+            >
+                Subscribe
+            </motion.button>
+          </Link>
 
-      <div className="w-full ">
+      {/* <div className="w-full ">
         <iframe
           src="https://subscribe-forms.beehiiv.com/3f3a20ea-54a5-447a-9f54-1bdfc0e19586"
           className="w-full max-w-3xl "
@@ -95,7 +95,7 @@ function Hero() {
           //   boxShadow: '0 0 #0000',
           // }}
         />
-      </div>
+      </div> */}
         </motion.div>
       </motion.div>
 

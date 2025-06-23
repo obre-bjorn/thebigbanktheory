@@ -5,7 +5,38 @@ import Image from 'next/image';
 import Link from 'next/link';
 import BackToTop from './BackToTop';
 
+import { IoNewspaperOutline  } from 'react-icons/io5';
+import { CgProfile } from "react-icons/cg";
+import { HiUserGroup } from "react-icons/hi2";
+import { TfiEmail } from "react-icons/tfi";
+
+
+
 import {motion} from 'framer-motion'
+
+const navs  = [
+  {
+    name: "Newsletter",
+    url : "#newsletter",
+    icon: <IoNewspaperOutline/>
+  },
+  {
+    name: "About ",
+    url : "#about",
+    icon: <CgProfile/>
+  },
+  {
+    name: "Partnership",
+    url : "#partnership",
+    icon: <HiUserGroup/> 
+  },
+  {
+    name: "Contact",
+    url : "#contact",
+    icon: <TfiEmail/> 
+  }
+
+] 
 
 
 
@@ -35,7 +66,7 @@ const Header = () => {
   };
 
   return (
-    <header  id="home" className=" bg-[#FFFFFF] h-[10vh] min-h-10 w-screen  fixed z-45">
+    <header  id="home" className=" bg-[#FFFFFF] max-h-[10vh] p- min-h-10 w-screen pb-2 fixed z-45">
 
 
     <div className="container mx-auto navbar justify-between items-center">
@@ -51,7 +82,7 @@ const Header = () => {
               />
 
               
-              <p className={`text-xl font-bold `}>The Big Bank Theory</p>
+              <p className={` text-md md:text-xl font-bold `}>The Big Bank Theory</p>
             </Link>
           </div>
           
@@ -112,6 +143,7 @@ const Header = () => {
               </Link>
 
               <div className="drawer drawer-end ">
+
                 <input 
                   id="my-drawer" 
                   type="checkbox" 
@@ -120,6 +152,8 @@ const Header = () => {
                 />
                 
                 <div className="drawer-content lg:hidden">
+                  
+
                   <label htmlFor='my-drawer'
                     className=" btn-ghost btn-xl btn-circle swap swap-rotate z-55"
                     onClick={toggleDrawer}
@@ -127,7 +161,7 @@ const Header = () => {
                   >
                     {isOpen ? (
                       <svg
-                        className="fill-[#F6C103]"
+                        className="fill-black"
                         xmlns="http://www.w3.org/2000/svg"
                         width="30"
                         height="30"
@@ -149,52 +183,41 @@ const Header = () => {
                   </label>
                 </div>
 
-          <div className="drawer-side z-50 w-screen h-screen">
+          <div className="drawer-side z-50 w-screen h-screen p-0">
             <label
               htmlFor="my-drawer"
               className="drawer-overlay"
               onClick={closeDrawer}
             />
-            <ul className="menu bg-gray-950 p-4 px-10 w-screen min-h-full  text-base-100 justify-center">
-              <div className='mx-auto flex justify-center items-center  mb-15 gap-2'>
+            <ul className="menu bg-[#ffffff]  w-screen  h-screen text-base-100 p-0">
+            <svg className="min-h-28 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFDE59" fill-opacity="1" d="M0,96L30,96C60,96,120,96,180,128C240,160,300,224,360,261.3C420,299,480,309,540,272C600,235,660,149,720,144C780,139,840,213,900,224C960,235,1020,181,1080,154.7C1140,128,1200,128,1260,144C1320,160,1380,192,1410,208L1440,224L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></svg>
+            
+              <div className=' w-full  flex items-center justify-center mb-12 gap-2'>
                 
-                <Image src="/images/logo_yellow.webp" alt="Logo" width={40} height={40} className=''/>
-                <p>The Big Bank Theory</p>
+                  <Image src="/images/logo.webp" alt="Logo" width={40} height={40} />
+                <p className='text-[#010101]'>The Big Bank Theory</p>
 
               </div>
 
-              <li>
-                <Link href="#newsletter" onClick={handleLinkClick} className='text-5xl font-semibold transition-all'>
-                  Newsletter
-                </Link>
-              </li>
-
-              <li>
-                <Link href="#about" onClick={handleLinkClick} className='text-5xl font-semibold'>
-                  <label htmlFor="my-drawer" >
-                    About
-                  </label>
-                </Link>
-              </li>
-
-              <li>
-                <Link href="#partnership" onClick={handleLinkClick} className='text-5xl font-semibold'>
-                  <label htmlFor="my-drawer" className='drawer-button'>
-                    Partnership
-                  </label>
-                </Link>
-              </li>
-
-              <li>
-                <Link href="#contact" onClick={handleLinkClick} className='text-5xl font-semibold'>
-                  <label htmlFor="my-drawer" className='drawer-button hover:text-red-600'>
-                    Contact
-                  </label>
-                </Link>
-              </li>
+              {navs.map((nav) => (
+                <li key={nav.name}>
+                  <Link href={nav.url} onClick={handleLinkClick} className='text-4xl font-semibold text-[#010101]'>
+                    {nav.icon}
+                    <label htmlFor="my-drawer" className='drawer-button'>
+                      {nav.name}
+                    </label>
+                  </Link>
+                </li>
+              ))}
               
               {/* <button className='btn-xl'>Subscribe</button> */}
+
             </ul>
+
+              {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#FFDE59" fill-opacity="1" d="M0,96L30,96C60,96,120,96,180,128C240,160,300,224,360,261.3C420,299,480,309,540,272C600,235,660,149,720,144C780,139,840,213,900,224C960,235,1020,181,1080,154.7C1140,128,1200,128,1260,144C1320,160,1380,192,1410,208L1440,224L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path>
+</svg> */}
+            
           </div>
 
       </div>

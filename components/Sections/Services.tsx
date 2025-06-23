@@ -6,11 +6,7 @@ import { motion } from 'framer-motion'
 function Services() {
 
   const services = [
-    {
-      title: "Editorial strategy and ghostwriting",
-      src: "/images/editorial.webp",
-      description: "From founder letters to whitepapers, I write with authority, warmth, and insight. Perfect for leaders with something to say."
-    },
+   
     {
       title: "Research and insight briefs",
       src: "/images/research.webp",
