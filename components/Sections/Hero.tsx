@@ -38,7 +38,7 @@ function Hero() {
   return (
     <section className="hero bg-[#FFFFFF] relative min-h-screen w-full px-4 overflow-hidden ">
       <motion.div
-        className="hero-content flex-col-reverse lg:flex-row-reverse w-full max-w-7xl mx-auto z-20 relative mt-[10vh]"
+        className="hero-content flex-col-reverse lg:flex-row-reverse w-full max-w-7xl mx-auto z-20 relative mt-[10vh] lg:gap-10"
         variants={container}
         initial="hidden"
         whileInView="show"
